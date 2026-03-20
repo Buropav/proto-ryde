@@ -47,9 +47,9 @@ income. General gig worker schemes are too broad and too slow.
 
 ---
 
-## Our Solution: RideProtect
+## Our Solution: ProtoRyde
 
-RideProtect is a **parametric income insurance platform** for Delhivery banking 
+ProtoRyde is a **parametric income insurance platform** for Delhivery banking 
 delivery partners. Parametric means:
 
 - No claim forms. No adjusters. No 30-day wait.
@@ -95,11 +95,11 @@ requires greater accountability.
 > parcels in covered areas). Actual earnings: ₹180. Normal day: ₹1,050. 
 > Loss: **₹870**.  
 >  
-> Without RideProtect: Pranav eats into savings, postpones his child's 
+> Without ProtoRyde: Pranav eats into savings, postpones his child's 
 > school fees payment.  
 >  
-> With RideProtect: At 10:22 AM, 7 minutes after the ops advisory, 
-> RideProtect detected 44mm rainfall in Pranav's zone, confirmed the 
+> With ProtoRyde: At 10:22 AM, 7 minutes after the ops advisory, 
+> ProtoRyde detected 44mm rainfall in Pranav's zone, confirmed the 
 > Delhivery ops advisory via API, cross-checked his GPS, verified no 
 > fraud flags, and initiated a ₹840 UPI transfer. Pranav got a 
 > notification before he'd even pulled over to find shelter.
@@ -113,7 +113,7 @@ requires greater accountability.
 > Pranav's 18 scheduled deliveries drop to 5 completable ones.  
 > Loss: **₹640**.  
 >  
-> With RideProtect: AQI trigger (>300 for 6+ consecutive hours) fires 
+> With ProtoRyde: AQI trigger (>300 for 6+ consecutive hours) fires 
 > at 2 PM. ₹590 credited automatically.
 
 ### Scenario C: Bank Branch Bandh (Specific to Banking Delivery)
@@ -124,7 +124,7 @@ requires greater accountability.
 > Pranav has 21 banking deliveries. Zero can be completed since the 
 > destinations don't exist today. Loss: **₹1,020**.  
 >  
-> With RideProtect: RideProtect's Branch Closure Trigger detects 
+> With ProtoRyde: ProtoRyde's Branch Closure Trigger detects 
 > >60% of bank branches in Pranav's zone are non-operational 
 > (via Google Places status API + mock). Trigger fires at 9 AM. 
 > ₹920 credited. No food delivery insurance product can replicate 
@@ -141,7 +141,7 @@ the trigger fires but the insured didn't lose income, or the insured
 lost income but the trigger didn't fire. Poorly designed parametric 
 products have high basis risk and lose customer trust.
 
-**RideProtect's three-layer basis risk minimization:**
+**ProtoRyde's three-layer basis risk minimization:**
 
 **Layer 1 - Zone-level triggers, not city-level.**  
 We use 5km radius weather data around the rider's registered zone, 
@@ -221,7 +221,7 @@ motivation intact while still providing meaningful protection.
 
 ### Parametric Triggers
 
-| # | Trigger | Threshold | Duration | Data Source | Unique To RideProtect? |
+| # | Trigger | Threshold | Duration | Data Source | Unique To ProtoRyde? |
 |---|---|---|---|---|---|
 | 1 | Heavy Rainfall | >30mm in rider's 5km zone | 6+ consecutive hrs | OpenWeatherMap (free) | No |
 | 2 | Extreme Heat | >40°C | 6+ consecutive hrs | Open-Meteo | No |
@@ -366,7 +366,7 @@ teams do.
 ### Feature 1: Rain Radar Pre-Warning (24 Hours Ahead)
 When tomorrow has >60% rain probability in the rider's zone:
 > *"⚠️ Tomorrow looks risky for your zone (HSR Layout). 
-> 74% chance of heavy rain. Your RideProtect coverage 
+> 74% chance of heavy rain. Your ProtoRyde coverage 
 > protects up to ₹2,300. Stay safe, you're covered."*
 
 This lets riders see the product's value before the event happens, 
@@ -383,7 +383,7 @@ Tangible, visual proof that the product works.
 
 ### Feature 3: Premium Transparency Card
 Every Monday when premium is charged:
-> *"This week's RideProtect: ₹67*  
+> *"This week's ProtoRyde: ₹67*  
 > Base zone premium: ₹82  
 > Zone safety discount: -₹22  
 > Rain forecast adjustment: +₹7  
@@ -393,7 +393,7 @@ No other team will show riders WHY their premium changed.
 
 ### Feature 4: Trigger Verification Receipt
 When a claim triggers, the rider receives a verifiable receipt:
-> *"📋 RideProtect Claim Record #BKS-2025-07-14-VKR  
+> *"📋 ProtoRyde Claim Record #BKS-2025-07-14-VKR  
 > Trigger: Rainfall - 44mm at coordinates [zone center]  
 > Source: OpenWeatherMap API (verified 10:22 AM)  
 > Delhivery cancellations in your zone: 14/18 (78%)  
@@ -504,7 +504,7 @@ Bangalore has an estimated 12,000+ Delhivery active partners.
 
 ## Business Model Vision: Beyond Premiums
 
-Beyond premiums as the only revenue line, RideProtect has **three 
+Beyond premiums as the only revenue line, ProtoRyde has **three 
 revenue layers**, making it a platform, not just a product.
 
 ### Revenue Layer 1: Insurance Premiums (Core)
@@ -512,7 +512,7 @@ Weekly premiums from riders. ₹55-₹115/week per rider.
 
 ### Revenue Layer 2: DeliveryTrust Score
 
-Every RideProtect rider accumulates a **DeliveryTrust Score**, a 
+Every ProtoRyde rider accumulates a **DeliveryTrust Score**, a 
 composite reliability metric built from our unique data sources:
 
 ```
@@ -521,7 +521,7 @@ DeliveryTrust Score = f(
     zone_consistency,          # does rider work their registered zone reliably?
     weather_resilience_index,  # % of borderline-weather days rider still worked
     delivery_completion_rate,  # from Delhivery API (simulated)
-    platform_tenure_months,    # time on RideProtect
+    platform_tenure_months,    # time on ProtoRyde
     earnings_stability_cv      # coefficient of variation of weekly earnings
 )
 ```
@@ -539,13 +539,13 @@ product. Insurance-only teams can't replicate this without the
 Delhivery-specific delivery data layer.
 
 **The flywheel:** More riders -> more data -> better DeliveryTrust 
-scores -> banks trust RideProtect-scored riders -> Delhivery routes 
+scores -> banks trust ProtoRyde-scored riders -> Delhivery routes 
 more premium work to scored riders -> riders earn more -> more riders 
-want RideProtect.
+want ProtoRyde.
 
 ### Revenue Layer 3: B2B Route-Risk Intelligence API
 
-RideProtect's zone-level weather risk grid, built for premium 
+ProtoRyde's zone-level weather risk grid, built for premium 
 calculation, has independent commercial value:
 
 **API endpoint (conceptual):**
@@ -580,11 +580,11 @@ for bulk access. At 10,000 queries/day from 5 banking partners =
 
 ## Beyond Insurance: The Delivery Intelligence Layer
 
-> *RideProtect doesn't stop at insurance. It builds the intelligence 
+> *ProtoRyde doesn't stop at insurance. It builds the intelligence 
 > infrastructure that India's banking last-mile logistics doesn't 
 > have today.*
 
-RideProtect goes beyond insurance by creating a Delivery Intelligence 
+ProtoRyde goes beyond insurance by creating a Delivery Intelligence 
 Layer:
 
 ### What This Means in Practice
@@ -596,7 +596,7 @@ Bangalore, they have **zero** answers to:
 - "Should we delay dispatch to Bellandur today due to flooding?"
 - "What's our expected delivery failure rate this monsoon?"
 
-**RideProtect answers all four** as a byproduct of running the 
+**ProtoRyde answers all four** as a byproduct of running the 
 insurance platform. The weather risk grid, rider scoring engine, 
 and zone analytics built for premium calculation become standalone 
 infrastructure.
@@ -627,14 +627,14 @@ this can be a real company, not just a hackathon project.
 Guidewire builds PolicyCenter, ClaimCenter, and BillingCenter - 
 enterprise insurance infrastructure. A team that builds **insurance 
 infrastructure** (not just an insurance app) speaks Guidewire's 
-language. RideProtect's Delivery Intelligence Layer mirrors this 
+language. ProtoRyde's Delivery Intelligence Layer mirrors this 
 kind of platform thinking.
 
 ---
 
-## Why RideProtect Wins
+## Why ProtoRyde Wins
 
-| Factor | Generic Food Insurance | RideProtect |
+| Factor | Generic Food Insurance | ProtoRyde |
 |---|---|---|
 | Persona uniqueness | 1 of 50+ teams | Only team in hackathon |
 | Trigger uniqueness | Rain/Heat/AQI | Rain/Heat/AQI + Bank Closures + Ops Advisory |
