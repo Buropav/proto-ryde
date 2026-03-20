@@ -6,7 +6,8 @@
 > between his safety and his family's dinner."*
 
 **DEVTrails 2026 | Guidewire University Hackathon**  
-**Team:** [Burapav] | **Location:** Coimbatore, Tamil Nadu  
+**Team:** Buropav  \
+**Location:** Coimbatore, Tamil Nadu  
  
 
 📹 **Demo Video:** [INSERT LINK]  
