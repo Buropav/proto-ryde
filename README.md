@@ -11,7 +11,7 @@
  
 
 📹 **Demo Video:** [INSERT LINK]  
-🔗 **Live Prototype:** [INSERT GITHUB PAGES LINK]  
+🔗 **Live Prototype:** [https://buropav.github.io/buropav/](https://buropav.github.io/buropav/)  
 
 ---
 
