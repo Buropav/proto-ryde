@@ -13,9 +13,6 @@ export default function WelcomeScreen() {
             style={styles.heroImage}
             resizeMode="cover"
           />
-          <View style={styles.verifiedBadge}>
-            <Text style={styles.verifiedIcon}>✓</Text>
-          </View>
         </View>
       </View>
 
@@ -91,26 +88,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
   },
   heroImage: {
+    marginTop: -40  ,
     width: '120%',
     height: '120%',
   },
-  verifiedBadge: {
-    position: 'absolute',
-    top: 16,
-    right: 16,
-    backgroundColor: colors.primary,
-    padding: 12,
-    borderRadius: 12,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.15,
-    shadowRadius: 8,
-  },
-  verifiedIcon: {
-    fontSize: 24,
-    color: colors.onPrimary,
-  },
   contentSection: {
+    marginTop: -20,
     flex: 1,
     backgroundColor: colors.surfaceContainerLowest,
     borderTopLeftRadius: 40,
