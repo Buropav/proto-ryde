@@ -12,7 +12,7 @@
     "build:android": "expo run:android",
     "build:ios": "expo run:ios",
     "predeploy": "npx expo export",
-    "deploy": "touch dist/.nojekyll && gh-pages -d dist --dotfiles"
+    "deploy": "node -e \"require('fs').writeFileSync('dist/.nojekyll', '')\" && gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "@expo/vector-icons": "^15.1.1",
