@@ -5,14 +5,6 @@ import { colors } from '../../src/constants/colors';
 export default function WelcomeScreen() {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <View style={styles.logoRow}>
-          <Text style={styles.shieldIcon}>🛡️</Text>
-          <Text style={styles.logoText}>ProtoRyde</Text>
-        </View>
-        <Text style={styles.stepText}>Step 1 of 5</Text>
-      </View>
-
       <View style={styles.heroSection}>
         <View style={styles.heroGlow} />
         <View style={styles.heroContent}>
@@ -49,7 +41,7 @@ export default function WelcomeScreen() {
         </View>
 
         <View style={styles.ctaContainer}>
-          <TouchableOpacity 
+          <TouchableOpacity
             style={styles.ctaButton}
             onPress={() => router.push('/personal-details')}
             activeOpacity={0.98}
@@ -74,40 +66,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.surface,
   },
-  header: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 24,
-    paddingTop: 60,
-    paddingBottom: 16,
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    zIndex: 50,
-    backgroundColor: 'rgba(15,20,25,0.85)',
-  },
-  logoRow: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  shieldIcon: {
-    fontSize: 24,
-  },
-  logoText: {
-    fontSize: 18,
-    fontWeight: '800',
-    color: colors.primary,
-  },
-  stepText: {
-    fontSize: 14,
-    fontWeight: '600',
-    color: colors.onSurfaceVariant,
-  },
+
   heroSection: {
-    height: '30%',
+    height: '40%',
     backgroundColor: '#162029',
     position: 'relative',
     overflow: 'hidden',
@@ -130,9 +91,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
   },
   heroImage: {
-    width: '100%',
-    height: 160,
-    borderRadius: 16,
+    width: '120%',
+    height: '120%',
   },
   verifiedBadge: {
     position: 'absolute',
@@ -154,8 +114,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.surfaceContainerLowest,
     borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
-    marginTop: -32,
+    borderTopRightRadius: 40, 
     zIndex: 20,
   },
   contentInner: {
