@@ -5,17 +5,19 @@ import { colors } from '../../src/constants/colors';
 export default function PremiumReveal() {
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Text style={styles.backIcon}>←</Text>
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Your ProtoRyde Plan</Text>
-        <Text style={styles.stepText}>Step 3 of 3</Text>
-      </View>
 
       <ScrollView style={styles.mainContent} showsVerticalScrollIndicator={false}>
         <View style={styles.progressBar}>
           <View style={styles.progressFill} />
+        </View>
+
+        <View style={styles.section}>
+          <View style={styles.titleRow}>
+            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+              <Text style={styles.backIcon}>←</Text>
+            </TouchableOpacity>
+            <Text style={styles.sectionTitle}>Your ProtoRyde Plan</Text>
+          </View>
         </View>
 
         <View style={styles.premiumCard}>
@@ -96,7 +98,7 @@ export default function PremiumReveal() {
           onPress={() => router.replace('/(tabs)/home-screen')}
           activeOpacity={0.98}
         >
-          <Text style={styles.activateText}>Activate My ProtoRyde — Pay ₹67</Text>
+          <Text style={styles.activateText}>Activate ProtoRyde — Pay ₹67</Text>
           <View style={styles.upiBadge}>
             <Text style={styles.upiText}>UPI</Text>
           </View>
@@ -112,14 +114,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.surface,
   },
-  header: {
+  titleRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 24,
-    paddingTop: 60,
-    paddingBottom: 16,
-    backgroundColor: colors.surface,
+    gap: 12,
+    marginBottom: 4,
   },
   backButton: {
     padding: 8,
@@ -128,25 +127,24 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: colors.primary,
   },
-  headerTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: colors.primaryContainer,
-  },
-  stepText: {
-    fontSize: 14,
-    fontWeight: '700',
-    color: colors.onSurfaceVariant,
-  },
   mainContent: {
     flex: 1,
     paddingHorizontal: 24,
+    paddingTop: 30,
+  },
+  section: {
+    marginBottom: 24,
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: '800',
+    color: colors.primary,
   },
   progressBar: {
     height: 6,
     backgroundColor: colors.surfaceContainerHighest,
     borderRadius: 3,
-    marginBottom: 32,
+    marginBottom: 15,
     overflow: 'hidden',
   },
   progressFill: {
