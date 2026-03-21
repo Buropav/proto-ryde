@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 16,
     fontWeight: '500',
-    color: colors.onSurfaceVariant,
+    color: colors.onSurface,
     letterSpacing: 0.5,
     textAlign: 'center',
   },
