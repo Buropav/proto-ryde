@@ -54,7 +54,7 @@ export default function WelcomeScreen() {
             onPress={() => router.push('/personal-details')}
             activeOpacity={0.98}
           >
-            <Text style={styles.ctaText}>Get Started — It's Free</Text>
+            <Text style={styles.ctaText}>Get Started</Text>
           </TouchableOpacity>
           <Text style={styles.ctaSubtext}>₹67–₹115/week. Cancel anytime.</Text>
 
