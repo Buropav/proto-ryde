@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { router } from 'expo-router';
 import { colors } from '../../src/constants/colors';
 
@@ -27,7 +27,7 @@ export default function WelcomeScreen() {
         </View>
       </View>
 
-      <View style={styles.contentSection}>
+      <ScrollView style={styles.contentSection} contentContainerStyle={styles.contentInner} bounces={false} showsVerticalScrollIndicator={false}>
         <Text style={styles.headline}>Your income.{'\n'}Protected.</Text>
         <Text style={styles.description}>
           When Bangalore rains halt your deliveries, <Text style={styles.bold}>ProtoRyde automatically pays you.</Text> No forms. No waiting.
@@ -62,7 +62,7 @@ export default function WelcomeScreen() {
             <Text style={styles.loginText}>Already have an account? Log in</Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </ScrollView>
 
       <View style={styles.ambientShadow} />
     </View>
@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
     color: colors.onSurfaceVariant,
   },
   heroSection: {
-    height: '40%',
+    height: '30%',
     backgroundColor: '#162029',
     position: 'relative',
     overflow: 'hidden',
@@ -127,11 +127,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: 48,
+    paddingHorizontal: 32,
   },
   heroImage: {
     width: '100%',
-    height: 200,
+    height: 160,
     borderRadius: 16,
   },
   verifiedBadge: {
@@ -156,24 +156,27 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 40,
     borderTopRightRadius: 40,
     marginTop: -32,
-    paddingHorizontal: 32,
-    paddingTop: 40,
-    paddingBottom: 32,
     zIndex: 20,
   },
+  contentInner: {
+    flexGrow: 1,
+    paddingHorizontal: 28,
+    paddingTop: 32,
+    paddingBottom: 24,
+  },
   headline: {
-    fontSize: 28,
+    fontSize: 24,
     fontWeight: '800',
     color: colors.primary,
-    lineHeight: 34,
-    marginBottom: 16,
+    lineHeight: 30,
+    marginBottom: 10,
   },
   description: {
-    fontSize: 15,
+    fontSize: 14,
     color: colors.onSurfaceVariant,
-    lineHeight: 24,
+    lineHeight: 22,
     maxWidth: '90%',
-    marginBottom: 48,
+    marginBottom: 20,
   },
   bold: {
     fontWeight: '600',
@@ -182,8 +185,8 @@ const styles = StyleSheet.create({
   pillContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 12,
-    marginBottom: 48,
+    gap: 10,
+    marginBottom: 24,
   },
   pill: {
     flexDirection: 'row',
@@ -209,7 +212,7 @@ const styles = StyleSheet.create({
   },
   ctaButton: {
     backgroundColor: colors.primary,
-    paddingVertical: 20,
+    paddingVertical: 16,
     paddingHorizontal: 24,
     borderRadius: 12,
     alignItems: 'center',
@@ -219,7 +222,7 @@ const styles = StyleSheet.create({
     shadowRadius: 16,
   },
   ctaText: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: '700',
     color: colors.onPrimary,
   },
