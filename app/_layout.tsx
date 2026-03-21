@@ -16,12 +16,12 @@ const PHONE_FRAME_CSS = `
     min-height: 100vh !important;
   }
   #root {
-    width: 400px !important;
-    max-width: 400px !important;
-    height: 850px !important;
+    width: 360px !important;
+    max-width: 360px !important;
+    height: 780px !important;
     max-height: 95vh !important;
-    border-radius: 40px !important;
-    border: 8px solid #4b5563 !important;
+    border-radius: 36px !important;
+    border: 7px solid #4b5563 !important;
     overflow: hidden !important;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
     position: relative !important;
