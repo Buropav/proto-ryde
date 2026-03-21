@@ -19,7 +19,7 @@ export default function WelcomeScreen() {
       <ScrollView style={styles.contentSection} contentContainerStyle={styles.contentInner} bounces={false} showsVerticalScrollIndicator={false}>
         <Text style={styles.headline}>Your income.{'\n'}Protected.</Text>
         <Text style={styles.description}>
-          When Bangalore rains halt your deliveries, <Text style={styles.bold}>ProtoRyde automatically pays you.</Text> No forms. No waiting.
+          When Bangalore rains halt your deliveries, <Text style={styles.bold}>ProtoRyde automatically pays you.</Text>
         </Text>
 
         <View style={styles.pillContainer}>
@@ -88,16 +88,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 32,
   },
   heroImage: {
-    marginTop: -40  ,
+    marginTop: -50,
     width: '120%',
-    height: '120%',
+    height: '150%',
   },
   contentSection: {
-    marginTop: -20,
     flex: 1,
     backgroundColor: colors.surfaceContainerLowest,
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40, 
     zIndex: 20,
   },
   contentInner: {
@@ -107,6 +104,7 @@ const styles = StyleSheet.create({
     paddingBottom: 24,
   },
   headline: {
+    marginTop: -5,
     fontSize: 24,
     fontWeight: '800',
     color: colors.primary,
@@ -176,7 +174,7 @@ const styles = StyleSheet.create({
     marginTop: 12,
   },
   loginLink: {
-    marginTop: 16,
+    marginTop: 10,
     textAlign: 'center',
   },
   loginText: {
