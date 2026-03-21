@@ -89,7 +89,7 @@ export default function PartnerDetails() {
           <View style={styles.infoCard}>
             <Text style={styles.infoIcon}>⚡</Text>
             <Text style={styles.infoText}>
-              Your zone determines your weekly premium. <Text style={styles.bold}>HSR Layout</Text> is a medium-risk zone — typical premium <Text style={styles.boldPrimary}>₹82/week</Text>.
+              Your zone determines your weekly premium. <Text style={styles.bold}>HSR Layout</Text> is a medium-risk zone with a typical premium <Text style={styles.boldPrimary}>₹82/week</Text>.
             </Text>
           </View>
         </View>
@@ -131,10 +131,10 @@ const styles = StyleSheet.create({
   mainContent: {
     flex: 1,
     paddingHorizontal: 24,
-    paddingTop: 35,
+    paddingTop: 30,
   },
   progressSection: {
-    marginBottom: 24,
+    marginBottom: 15,
   },
   progressHeader: {
     flexDirection: 'row',
