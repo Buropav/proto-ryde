@@ -50,7 +50,6 @@ const styles = StyleSheet.create({
   mainContent: {
     flex: 1,
     paddingHorizontal: 24,
-    marginBottom: 100,
   },
   emptyState: {
     alignItems: 'center',

@@ -31,15 +31,9 @@ export default function SplashScreen() {
 
   return (
     <View style={styles.container}>
-      <View style={styles.topGlow} />
-      
       <Animated.View style={[styles.content, { opacity: fadeAnim, transform: [{ scale: scaleAnim }] }]}>
         <View style={styles.iconContainer}>
-          <View style={styles.iconRing} />
           <Text style={styles.shieldIcon}>🛡️</Text>
-          <View style={styles.bankIcon}>
-            <Text style={styles.bankIconText}>💰</Text>
-          </View>
         </View>
 
         <Text style={styles.title}>ProtoRyde</Text>
@@ -47,8 +41,6 @@ export default function SplashScreen() {
       </Animated.View>
 
       <View style={styles.bottomSection}>
-        <View style={styles.amberGlow} />
-        
         <View style={styles.loadingContainer}>
           <View style={[styles.dot, styles.dotActive]} />
           <View style={styles.dot} />
@@ -64,98 +56,67 @@ export default function SplashScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.primaryContainer,
+    backgroundColor: colors.surface,
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingVertical: 48,
+    paddingVertical: 60,
     paddingHorizontal: 24,
-  },
-  topGlow: {
-    position: 'absolute',
-    top: -40,
-    right: -40,
-    width: 256,
-    height: 256,
-    backgroundColor: colors.primary,
-    borderRadius: 128,
-    opacity: 0.4,
   },
   content: {
     alignItems: 'center',
-    zIndex: 10,
+    justifyContent: 'center',
+    flex: 1,
   },
   iconContainer: {
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: 32,
-  },
-  iconRing: {
-    position: 'absolute',
-    width: 96,
-    height: 96,
-    borderWidth: 2,
-    borderColor: 'rgba(255,255,255,0.2)',
-    borderRadius: 48,
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    backgroundColor: colors.surfaceContainer,
   },
   shieldIcon: {
-    fontSize: 80,
-  },
-  bankIcon: {
-    position: 'absolute',
-    backgroundColor: colors.onPrimary,
-    padding: 8,
-    borderRadius: 20,
-  },
-  bankIconText: {
-    fontSize: 24,
+    fontSize: 64,
   },
   title: {
-    fontSize: 32,
+    fontSize: 36,
     fontWeight: '800',
-    color: colors.onPrimary,
+    color: colors.primary,
     letterSpacing: 1,
-    marginBottom: 8,
+    marginBottom: 12,
   },
   subtitle: {
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: '500',
-    color: colors.outlineVariant,
+    color: colors.onSurfaceVariant,
     letterSpacing: 0.5,
+    textAlign: 'center',
   },
   bottomSection: {
-    width: '100%',
     alignItems: 'center',
-    zIndex: 10,
-  },
-  amberGlow: {
-    position: 'absolute',
-    bottom: -80,
-    width: 320,
-    height: 320,
-    backgroundColor: colors.secondaryContainer,
-    opacity: 0.2,
-    borderRadius: 160,
   },
   loadingContainer: {
     flexDirection: 'row',
     gap: 12,
-    marginBottom: 64,
+    marginBottom: 40,
   },
   dot: {
     width: 8,
     height: 8,
     borderRadius: 4,
-    backgroundColor: colors.onPrimary,
-    opacity: 0.4,
+    backgroundColor: colors.primary,
+    opacity: 0.3,
   },
   dotActive: {
     opacity: 1,
   },
   footer: {
-    fontSize: 10,
-    fontWeight: '500',
-    color: colors.outlineVariant,
+    fontSize: 11,
+    fontWeight: '600',
+    color: colors.onSurfaceVariant,
     letterSpacing: 1.5,
     textTransform: 'uppercase',
+    opacity: 0.5,
   },
 });

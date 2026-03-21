@@ -239,12 +239,12 @@ const styles = StyleSheet.create({
   },
   verifiedIcon: {
     fontSize: 12,
-    color: colors.tertiaryContainer,
+    color: colors.tertiary,
   },
   verifiedText: {
     fontSize: 10,
     fontWeight: '700',
-    color: colors.tertiaryContainer,
+    color: colors.tertiary,
     textTransform: 'uppercase',
   },
   selectInput: {
@@ -363,7 +363,7 @@ const styles = StyleSheet.create({
   infoCard: {
     flexDirection: 'row',
     gap: 12,
-    backgroundColor: '#FFF8E7',
+    backgroundColor: '#1E2A36',
     padding: 16,
     borderRadius: 12,
     borderWidth: 1,
@@ -376,7 +376,7 @@ const styles = StyleSheet.create({
   infoText: {
     flex: 1,
     fontSize: 12,
-    color: colors.onSecondaryFixedVariant,
+    color: colors.onSurfaceVariant,
     fontWeight: '500',
     lineHeight: 18,
   },

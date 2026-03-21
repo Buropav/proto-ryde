@@ -1,14 +1,6 @@
 import { Tabs } from 'expo-router';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { colors } from '../../src/constants/colors';
-import { View, StyleSheet } from 'react-native';
-
-function TabBarIcon(props: {
-  name: typeof MaterialCommunityIcons.defaultProps.name;
-  color: string;
-}) {
-  return <MaterialCommunityIcons size={24} style={styles.tabIcon} {...props} />;
-}
+import { Text, StyleSheet } from 'react-native';
 
 export default function TabsLayout() {
   return (
@@ -25,28 +17,28 @@ export default function TabsLayout() {
         name="home-screen"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+          tabBarIcon: ({ color }) => <Text style={[styles.tabIcon, { color }]}>🏠</Text>,
         }}
       />
       <Tabs.Screen
         name="claims-list-screen"
         options={{
           title: 'Claims',
-          tabBarIcon: ({ color }) => <TabBarIcon name="clipboard-check-outline" color={color} />,
+          tabBarIcon: ({ color }) => <Text style={[styles.tabIcon, { color }]}>📋</Text>,
         }}
       />
       <Tabs.Screen
         name="coverage-screen"
         options={{
           title: 'Coverage',
-          tabBarIcon: ({ color }) => <TabBarIcon name="shield-check-outline" color={color} />,
+          tabBarIcon: ({ color }) => <Text style={[styles.tabIcon, { color }]}>🛡️</Text>,
         }}
       />
       <Tabs.Screen
         name="profile-screen"
         options={{
           title: 'Profile',
-          tabBarIcon: ({ color }) => <TabBarIcon name="account-outline" color={color} />,
+          tabBarIcon: ({ color }) => <Text style={[styles.tabIcon, { color }]}>👤</Text>,
         }}
       />
     </Tabs>
@@ -69,6 +61,7 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   tabIcon: {
+    fontSize: 22,
     marginBottom: -4,
   },
 });

@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
   },
   successHeader: {
     height: 280,
-    backgroundColor: '#F0FFF4',
+    backgroundColor: '#0D2818',
     borderBottomLeftRadius: 32,
     borderBottomRightRadius: 32,
     alignItems: 'center',
@@ -194,7 +194,7 @@ const styles = StyleSheet.create({
   },
   statusPill: {
     marginTop: 24,
-    backgroundColor: '#DCFCE7',
+    backgroundColor: '#0D2818',
     paddingHorizontal: 16,
     paddingVertical: 6,
     borderRadius: 20,
@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
   statusText: {
     fontSize: 12,
     fontWeight: '700',
-    color: '#166534',
+    color: '#4ADE80',
     letterSpacing: 0.5,
   },
   summarySection: {
@@ -331,7 +331,7 @@ const styles = StyleSheet.create({
   payoutSentValue: {
     fontSize: 16,
     fontWeight: '800',
-    color: '#166534',
+    color: '#4ADE80',
   },
   transferTimeValue: {
     fontSize: 14,
@@ -427,7 +427,7 @@ const styles = StyleSheet.create({
     padding: 8,
   },
   navItemActive: {
-    backgroundColor: '#EBF4FF',
+    backgroundColor: '#1A3C6E',
     borderRadius: 12,
     paddingHorizontal: 12,
   },

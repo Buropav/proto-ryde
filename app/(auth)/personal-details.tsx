@@ -261,7 +261,7 @@ const styles = StyleSheet.create({
   infoText: {
     flex: 1,
     fontSize: 12,
-    color: colors.primaryContainer,
+    color: colors.onSurfaceVariant,
     fontWeight: '500',
     lineHeight: 18,
   },

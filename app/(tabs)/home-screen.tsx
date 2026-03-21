@@ -78,11 +78,11 @@ export default function HomeScreen() {
             <View style={styles.progressFill} />
           </View>
           <View style={styles.dailyEarnings}>
-            <Text>Mon <Text style={styles.dayValue}>₹1,020</Text></Text>
+            <Text style={styles.dailyText}>Mon <Text style={styles.dayValue}>₹1,020</Text></Text>
             <Text style={styles.separator}>•</Text>
-            <Text>Tue <Text style={styles.dayValue}>₹980</Text></Text>
+            <Text style={styles.dailyText}>Tue <Text style={styles.dayValue}>₹980</Text></Text>
             <Text style={styles.separator}>•</Text>
-            <Text>Wed <Text style={styles.dayValue}>₹1,120</Text></Text>
+            <Text style={styles.dailyText}>Wed <Text style={styles.dayValue}>₹1,120</Text></Text>
             <Text style={styles.separator}>•</Text>
             <Text style={styles.ongoing}>Thu ongoing</Text>
           </View>
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 60,
     paddingBottom: 16,
-    backgroundColor: 'rgba(248,250,252,0.8)',
+    backgroundColor: 'rgba(15,20,25,0.85)',
     position: 'absolute',
     top: 0,
     left: 0,
@@ -172,7 +172,6 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 88,
     paddingHorizontal: 16,
-    marginBottom: 100,
   },
   coverageCard: {
     backgroundColor: colors.primaryContainer,
@@ -338,8 +337,12 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     color: colors.primary,
   },
+  dailyText: {
+    color: colors.onSurfaceVariant,
+  },
   separator: {
     opacity: 0.3,
+    color: colors.onSurfaceVariant,
   },
   ongoing: {
     color: colors.secondary,
@@ -380,12 +383,13 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: '#EBF4FF',
+    backgroundColor: '#1A3C6E',
     alignItems: 'center',
     justifyContent: 'center',
   },
   activityIconText: {
     fontSize: 16,
+    color: colors.onPrimary,
   },
   activityContent: {
     flex: 1,

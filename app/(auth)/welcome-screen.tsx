@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     zIndex: 50,
-    backgroundColor: 'rgba(247,249,252,0.8)',
+    backgroundColor: 'rgba(15,20,25,0.85)',
   },
   logoRow: {
     flexDirection: 'row',
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   },
   heroSection: {
     height: '40%',
-    backgroundColor: '#EBF4FF',
+    backgroundColor: '#162029',
     position: 'relative',
     overflow: 'hidden',
   },

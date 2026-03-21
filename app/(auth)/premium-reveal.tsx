@@ -307,7 +307,7 @@ const styles = StyleSheet.create({
   },
   infoIcon: {
     fontSize: 20,
-    color: colors.tertiaryContainer,
+    color: colors.tertiary,
   },
   infoContent: {
     flex: 1,
@@ -315,12 +315,12 @@ const styles = StyleSheet.create({
   infoTitle: {
     fontSize: 12,
     fontWeight: '700',
-    color: colors.tertiaryContainer,
+    color: colors.tertiary,
     marginBottom: 4,
   },
   infoText: {
     fontSize: 11,
-    color: colors.onTertiaryFixedVariant,
+    color: colors.onSurfaceVariant,
     lineHeight: 16,
   },
   footer: {
