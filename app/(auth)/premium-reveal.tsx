@@ -8,7 +8,7 @@ export default function PremiumReveal() {
 
       <ScrollView style={styles.mainContent} showsVerticalScrollIndicator={false}>
         <View style={styles.progressBar}>
-          <View style={styles.progressFill} />
+          <View style={[styles.progressFill, { width: '100%' }]} />
         </View>
 
         <View style={styles.section}>
@@ -27,7 +27,7 @@ export default function PremiumReveal() {
             <Text style={styles.price}>₹67</Text>
             <View style={styles.discountBadge}>
               <Text style={styles.strikePrice}>₹82 base</Text>
-              <Text style={styles.discount}>−₹15 zone discount</Text>
+              <Text style={styles.discount}>-₹15 zone discount</Text>
             </View>
           </View>
 
@@ -59,7 +59,7 @@ export default function PremiumReveal() {
           
           <View style={styles.breakdownRow}>
             <Text style={styles.breakdownLabel}>Low flood history discount</Text>
-            <Text style={[styles.breakdownValue, styles.discountValue]}>−₹22</Text>
+            <Text style={[styles.breakdownValue, styles.discountValue]}>-₹22</Text>
           </View>
           
           <View style={styles.breakdownRow}>
@@ -98,7 +98,7 @@ export default function PremiumReveal() {
           onPress={() => router.replace('/(tabs)/home-screen')}
           activeOpacity={0.98}
         >
-          <Text style={styles.activateText}>Activate ProtoRyde — Pay ₹67</Text>
+            <Text style={styles.activateText}>Activate ProtoRyde (₹67)</Text>
           <View style={styles.upiBadge}>
             <Text style={styles.upiText}>UPI</Text>
           </View>
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   mainContent: {
     flex: 1,
     paddingHorizontal: 24,
-    paddingTop: 30,
+    paddingTop: 35,
   },
   section: {
     marginBottom: 24,
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
   progressFill: {
     width: '100%',
     height: '100%',
-    backgroundColor: colors.primaryContainer,
+    backgroundColor: colors.primary,
     borderRadius: 3,
   },
   premiumCard: {
@@ -368,6 +368,7 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   footerText: {
+    marginBottom: -15,
     fontSize: 12,
     fontWeight: '500',
     color: colors.onSurfaceVariant,
