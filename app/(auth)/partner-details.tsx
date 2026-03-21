@@ -97,12 +97,6 @@ export default function PartnerDetails() {
 
       <View style={styles.footer}>
         <TouchableOpacity 
-          style={styles.backButtonFooter}
-          onPress={() => router.back()}
-        >
-          <Text style={styles.backText}>← Back</Text>
-        </TouchableOpacity>
-        <TouchableOpacity 
           style={styles.continueButton}
           onPress={() => router.push('/premium-reveal')}
           activeOpacity={0.98}
@@ -386,14 +380,7 @@ const styles = StyleSheet.create({
     shadowRadius: 16,
     gap: 16,
   },
-  backButtonFooter: {
-    padding: 12,
-  },
-  backText: {
-    fontSize: 14,
-    fontWeight: '500',
-    color: colors.onSurfaceVariant,
-  },
+
   continueButton: {
     flex: 1,
     flexDirection: 'row',
