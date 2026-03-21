@@ -9,8 +9,6 @@
 **Team:** Buropav\
 **Location:** Coimbatore, Tamil Nadu  
  
-
-📹 **Demo Video:** [INSERT LINK]  
 🔗 **Live Prototype:** [https://buropav.github.io/buropav/](https://buropav.github.io/buropav/)    
 
 ---
