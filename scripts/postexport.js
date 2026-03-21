@@ -22,10 +22,10 @@ const phoneFrameCSS = `
       min-height: 100vh !important;
     }
     #root {
-      height: 90vh !important;
-      max-height: 850px !important;
-      aspect-ratio: 375 / 812 !important;
-      width: auto !important;
+      width: 400px !important;
+      max-width: 400px !important;
+      height: 850px !important;
+      max-height: 95vh !important;
       border-radius: 40px !important;
       border: 8px solid #4b5563 !important;
       overflow: hidden !important;
