@@ -8,19 +8,10 @@ export default function PartnerDetails() {
       style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Text style={styles.backIcon}>←</Text>
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Set Up Your Account</Text>
-        <Text style={styles.stepText}>Step 2 of 5</Text>
-      </View>
 
       <ScrollView style={styles.mainContent} showsVerticalScrollIndicator={false}>
         <View style={styles.progressSection}>
           <View style={styles.progressHeader}>
-            <Text style={styles.progressLabel}>ONBOARDING PROGRESS</Text>
-            <Text style={styles.progressPercent}>66%</Text>
           </View>
           <View style={styles.progressBar}>
             <View style={[styles.progressFill, { width: '66%' }]} />
@@ -28,7 +19,12 @@ export default function PartnerDetails() {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Your Delivery Details</Text>
+          <View style={styles.titleRow}>
+            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+              <Text style={styles.backIcon}>←</Text>
+            </TouchableOpacity>
+            <Text style={styles.sectionTitle}>Set Up Your Account</Text>
+          </View>
           <Text style={styles.sectionSubtitle}>Tell us about your Delhivery partner profile.</Text>
         </View>
 
@@ -124,14 +120,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.surface,
   },
-  header: {
+  titleRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 24,
-    paddingTop: 60,
-    paddingBottom: 16,
-    backgroundColor: colors.surface,
+    gap: 12,
+    marginBottom: 4,
   },
   backButton: {
     padding: 8,
@@ -140,22 +133,14 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: colors.primary,
   },
-  headerTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: colors.primaryContainer,
-  },
-  stepText: {
-    fontSize: 14,
-    fontWeight: '700',
-    color: colors.onSurfaceVariant,
-  },
+
   mainContent: {
     flex: 1,
     paddingHorizontal: 24,
+    paddingTop: 35,
   },
   progressSection: {
-    marginBottom: 32,
+    marginBottom: 24,
   },
   progressHeader: {
     flexDirection: 'row',
@@ -193,7 +178,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '800',
     color: colors.primary,
-    marginBottom: 4,
   },
   sectionSubtitle: {
     fontSize: 13,
