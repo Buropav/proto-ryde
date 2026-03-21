@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 36,
     fontWeight: '800',
-    color: colors.primary,
+    color: colors.onSurface,
     letterSpacing: 1,
     marginBottom: 12,
   },
@@ -114,9 +114,9 @@ const styles = StyleSheet.create({
   footer: {
     fontSize: 11,
     fontWeight: '600',
-    color: colors.onSurfaceVariant,
+    color: colors.onSurface,
     letterSpacing: 1.5,
     textTransform: 'uppercase',
-    opacity: 0.5,
+    opacity: 0.8,
   },
 });
