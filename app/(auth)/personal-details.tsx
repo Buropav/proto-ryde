@@ -8,13 +8,6 @@ export default function PersonalDetails() {
       style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <View style={styles.header}>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
-          <Text style={styles.backIcon}>←</Text>
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Set Up Your Account</Text>
-        <Text style={styles.stepText}>Step 1 of 3</Text>
-      </View>
 
       <ScrollView style={styles.mainContent} showsVerticalScrollIndicator={false}>
         <View style={styles.progressContainer}>
@@ -24,7 +17,12 @@ export default function PersonalDetails() {
         </View>
 
         <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Personal Details</Text>
+          <View style={styles.titleRow}>
+            <TouchableOpacity onPress={() => router.back()} style={styles.backButton}>
+              <Text style={styles.backIcon}>←</Text>
+            </TouchableOpacity>
+            <Text style={styles.sectionTitle}>Set Up Your Account</Text>
+          </View>
           <Text style={styles.sectionSubtitle}>We need this to verify your Delhivery partner status.</Text>
         </View>
 
@@ -112,14 +110,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.surface,
   },
-  header: {
+  titleRow: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 24,
-    paddingTop: 60,
-    paddingBottom: 16,
-    backgroundColor: colors.surface,
+    gap: 12,
+    marginBottom: 4,
   },
   backButton: {
     padding: 8,
@@ -128,22 +123,13 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: colors.primary,
   },
-  headerTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: colors.primaryContainer,
-  },
-  stepText: {
-    fontSize: 14,
-    fontWeight: '500',
-    color: colors.onSurfaceVariant,
-  },
   mainContent: {
     flex: 1,
     paddingHorizontal: 24,
+    paddingTop: 35,
   },
   progressContainer: {
-    marginBottom: 32,
+    marginBottom: 24,
   },
   progressBar: {
     height: 6,
@@ -164,7 +150,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: '800',
     color: colors.primary,
-    marginBottom: 4,
   },
   sectionSubtitle: {
     fontSize: 13,
@@ -300,6 +285,7 @@ const styles = StyleSheet.create({
     color: colors.onPrimary,
   },
   securityRow: {
+    marginTop: -10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -308,8 +294,11 @@ const styles = StyleSheet.create({
   },
   lockIconSmall: {
     fontSize: 14,
+    marginBottom: -10,
   },
   securityText: {
+    marginTop: 1,
+    marginBottom: -10,
     fontSize: 11,
     fontWeight: '500',
     color: colors.onSurfaceVariant,
